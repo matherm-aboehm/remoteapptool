@@ -42,7 +42,7 @@ Module RemoteAppFunction
         Dim rx As New Regex(regex)
         If (rx.IsMatch(TheTextBox.Text)) Then
             TheTextBox.Text = rx.Replace(TheTextBox.Text, "")
-            TheTextBox.Select(cloc - 1, 0)
+            TheTextBox.Select(Math.Max(cloc - 1, 0), 0)
         Else
             TheTextBox.Select(cloc, 0)
         End If
